@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nav</title>
+    <script src="https://kit.fontawesome.com/34d3836add.js" crossorigin="anonymous"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Livvic:wght@100;200;400;500;700&family=Poppins:wght@200;300&family=Quicksand:wght@300;500;700&display=swap');
+        *{
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            text-decoration: none;
+            border: none;
+            outline: none;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+            font-size: 15px;
+        }
+        @media screen and (max-width: 956px) {
+            
+            #search button{
+                display: none;
+            }
+        }
+        @media screen and (max-width: 880px) {
+            #search__input input{
+                display: none;
+            }
+            #search__input .search__icon{
+                border-radius: 5px;
+            }
+            *{
+                font-size: 14px;
+            }
+        }
+        @media screen and (max-width: 705px){
+            *{
+                font-size: 18px;
+            }
+            header{
+                flex-direction: column;
+            }
+            #nav ul{
+                flex-direction: column;
+            }
+            #cnt2{
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                border-top: 1px solid #dfdfdfb2;;
+                width: 100%;
+                padding-top: 20px;
+                padding-left: 10px;
+                padding-right: 10px;
+            }
+            #search__input input{
+                display: block;
+            }
+            #search__input .search__icon{
+                border-radius: 0 5px 5px 0;
+            }
+            header{
+                gap: 5px;
+            }
+            #nav{
+                width: 100%;
+            }
+            #nav ul{
+                width: 100%;
+            }
+            #nav li{
+                width: 100%;
+                text-align: center;
+            }
+        }
+        body{
+            display: flex;
+            justify-content: center;
+            
+        }
+        header{
+            width: 100%;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            justify-content: center;
+      
+            border: 1px solid #dfdfdfb2;
+            border-radius: 0 0 10px 10px;
+            padding: 10px;
+            box-shadow: 0px 0px 5px rgba(128, 128, 128, 1);
+            max-width: 1200px;
+        }
+        #cnt2{
+            display: flex;
+            gap: 10px;
+        }
+        #logo{
+            width: 100px;
+        }
+        #logo img{
+            width: 100px;
+        }
+        #nav ul{
+            display: flex;
+            gap: 10px;
+            align-items: center;
+            justify-content: center;
+        }
+        #search{
+            display: flex;
+            gap: 8px;
+        }
+        #search__input{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        #search__input input{
+            border: 1px solid #dfdfdfb2;
+            padding: 0 0 0 5px;
+            height: 30px;
+            border-radius: 5px 0 0 5px;
+        }
+        .search__icon{
+            border: 1px solid #dfdfdfb2;;
+            height: 30px;
+            width: 30px;
+            border-radius: 0 5px 5px 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            background-color: #ecebebb2;
+        }
+        #search button{
+            padding: 5px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: all 0.2s ease 0s;
+        }
+        #search button:hover{
+            color: #2ab200;
+        }
+        .nav__li{
+            padding: 5px;
+            transition: all 0.2s ease 0s;
+            border-radius: 5px;
+        }
+        .nav__li:hover{
+            border-bottom: 1px solid #2ab200;
+        }
+        .nav__li:hover a{
+            color: #2ab200;
+        }
+        .nav__li a{
+            color: black;
+        }
+        
+    </style>
+</head>
+<body>
+    <header>
+        <div id="logo">
+            <a href="index.html">
+                <img src="src/logo.png" alt="logo empresa" >
+            </a>
+        </div>
+        <div id="cnt2">
+            <nav id="nav">
+                <ul id="nav__list">
+                    <li class="nav__li"><a href="#">Reports</a></li>
+                    <li class="nav__li"><a href="#">Insights</a></li>
+                    <li class="nav__li"><a href="#">Calendar</a></li>
+                    <li class="nav__li"><a href="#">Scheduler</a></li>
+                    <li class="nav__li"><a href="#">Teams</a></li>
+                    <li class="nav__li"><a href="#">Changelog</a></li>
+                </ul>
+            </nav>
+            <div id="search">
+                <div id="search__input">
+                    <input type="text" placeholder="Search">
+                    <div class="search__icon">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                    </div>
+                </div>
+                
+                <button class="search__button">Search</button>
+            </div>
+        </div>
+        
+    </header>
+</body>
+</html>
